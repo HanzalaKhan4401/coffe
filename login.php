@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('config.php');
 
 if(isset($_POST['login'])){
@@ -14,6 +13,7 @@ if(isset($_POST['login'])){
     $db_pass = $row['password'];
     $pass_decode = password_verify($login_pass, $db_pass);
     if($pass_decode){
+      session_start();
       $_SESSION["useremail"] = $row['email'];
       echo '<script>window.location.href="index.php"</script>';
     }
@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
       echo "<script>alert('Invalid username/password')</script>";
     }
   }
-}
+} 
 ?>
 
 <?php

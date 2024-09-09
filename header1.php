@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['useremail'])){
+  header('Location:login.php');
+  
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +20,7 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
+     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
