@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['useremail'])){
-  header('Location:login.php');
+if(isset($_SESSION['useremail'])){
+  header(header: 'Location:index.php');
   
 }
 
@@ -23,7 +23,7 @@ if(!isset($_SESSION['useremail'])){
      
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/magnific-popup.css"> 
 
     <link rel="stylesheet" href="css/aos.css">
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['useremail'])){
+if(!isset($_SESSION['useremail'])){
   header('Location:login.php');
   
 }
@@ -20,7 +20,7 @@ if(isset($_SESSION['useremail'])){
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css"> 
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
  
@@ -52,7 +52,7 @@ if(isset($_SESSION['useremail'])){
 			   
 				<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
 				<li class="nav-item cart"><a href="cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
-				<li class="nav-item"><a href="login.php" class="nav-link">logout</a></li>
+				<li class="nav-item"><a href="logout.php" class="nav-link">logout</a></li>
 				 
 			  </ul>
 	      </div>
